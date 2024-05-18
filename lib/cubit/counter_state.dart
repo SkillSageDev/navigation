@@ -1,11 +1,13 @@
-abstract class CounterState{
-  
+abstract class CounterState {}
+
+class CounterIncremented extends CounterState {
+  final int count;
+
+  CounterIncremented(this.count);
 }
 
-class CounterIncrement extends CounterState{
+class CounterDecremented extends CounterState {
+  final int count;
 
-}
-
-class CounterDecrement extends CounterState{
-
+  CounterDecremented(this.count);
 }

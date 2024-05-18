@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:navigation/admin.dart';
 import 'package:navigation/cubit/counter.dart';
 import 'package:navigation/cubit/counter_state.dart';
+import 'package:navigation/injector.dart';
+import 'package:navigation/login.dart';
 
-class MyHomePage extends StatelessWidget{
+class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
   late String name;
   late String email;
@@ -17,38 +17,36 @@ class MyHomePage extends StatelessWidget{
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Home Page"), 
-          backgroundColor: Colors.blue,),
+          title: const Text("Home Page"),
+          backgroundColor: Colors.blue,
+        ),
         body: Column(
           children: [
             BlocProvider(
               create: (context) => Counter(),
               child: Container(
                 child: BlocConsumer<Counter, CounterState>(
-                  listener: (context, state) {
-                    
-                  }, 
-                  builder: (BuildContext context, CounterState state){
-                    var counter = BlocProvider.of<Counter>(context);
-
+                  listener: (context, state) {},
+                  builder: (context, state) {
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Padding(padding: EdgeInsets.all(10),
-                        child: Text("${counter.count}"),
+                        Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text("${injector<Counter>().count}"),
                         ),
                         Row(
                           children: [
                             IconButton(
-                              icon: Icon(Icons.add),
+                              icon: const Icon(Icons.add),
                               onPressed: () {
-                                counter.increment();
+                                injector<Counter>().increment();
                               },
                             ),
                             IconButton(
-                              icon: Icon(Icons.minimize),
+                              icon: const Icon(Icons.minimize),
                               onPressed: () {
-                                counter.decrement();
+                                injector<Counter>().decrement();
                               },
                             )
                           ],
@@ -59,40 +57,10 @@ class MyHomePage extends StatelessWidget{
                 ),
               ),
             ),
-            Center(
-            child: Column(
-              children: [
-                Text("Enter your name"),
-                TextField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                ),
-                Text("Enter your email"),
-                TextField(
-                  onChanged: (value) {
-                    email = value;
-                  },
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context)
-                        .pushNamed(Admin.id, arguments: Args(name, email));
-                  },
-                  icon: Icon(Icons.pages),
-                ),
-              ],
-            ),
-          ),
+            Login(),
           ],
         ),
       ),
     );
   }
-}
-
-class Args {
-  late String name;
-  late String email;
-  Args(this.name, this.email);
 }

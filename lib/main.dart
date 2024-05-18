@@ -2,22 +2,22 @@
 
 import 'package:flutter/material.dart';
 import 'package:navigation/admin.dart';
+import 'package:navigation/my_home_page.dart';
+import 'injector.dart';
 
-import 'my_home_page.dart';
-
-void main(){
+void main() {
+  setup();
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MyHomePage(),
-      routes: {Admin.id: (context) => Admin()},
+      // routes: {Admin.id: (context) => Admin()},
     );
   }
-
 }
