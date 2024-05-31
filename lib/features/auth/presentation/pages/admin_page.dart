@@ -4,9 +4,9 @@ class Admin extends StatelessWidget {
   static const String id = "admin";
 
   final String name;
-  final String email;
+  final String password;
 
-  const Admin({super.key, required this.name, required this.email});
+  const Admin({super.key, required this.name, required this.password});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class Admin extends StatelessWidget {
           child: Column(
             children: [
               Text("Your name is $name"),
-              Text("Your email is $email"),
+              Text("Your password is $password"),
             ],
           ),
         ),

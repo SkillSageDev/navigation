@@ -1,12 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:navigation/admin.dart';
-import 'package:navigation/my_home_page.dart';
-import 'injector.dart';
+import 'package:navigation/config/theme/app_themes.dart';
+import 'package:navigation/features/auth/presentation/pages/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  setup();
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -16,7 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: theme(),
+      home: HomePage(),
       // routes: {Admin.id: (context) => Admin()},
     );
   }

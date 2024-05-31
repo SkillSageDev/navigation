@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "368181502150",
+    "project_id": "counter-dc987",
+    "storage_bucket": "counter-dc987.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368181502150:android:5224c398c03bbc1b4537c7",
+        "android_client_info": {
+          "package_name": "com.example.navigation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Pz5SIZbtzLbRjkqhRrBtCN_guudoqQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
