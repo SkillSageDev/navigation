@@ -5,7 +5,7 @@ class BarTheme{
   BarTheme._();
 
   /* -- light theme -- */
-  static final lightAppBarTheme = AppBarTheme(
+  static AppBarTheme get lightAppBarTheme => AppBarTheme(
     // elevation
     elevation: 0,
 
@@ -32,7 +32,7 @@ class BarTheme{
   );
 
   /* -- dark theme -- */
-  static final darkAppBarTheme = AppBarTheme(
+  static AppBarTheme get darkAppBarTheme => AppBarTheme(
     // elevation
     elevation: 0,
 

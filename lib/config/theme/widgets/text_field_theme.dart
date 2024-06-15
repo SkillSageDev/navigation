@@ -5,7 +5,7 @@ class AppTextFieldTheme {
   AppTextFieldTheme._();
 
   /* -- light theme -- */
-  static final InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
+  static InputDecorationTheme get lightInputDecorationTheme => InputDecorationTheme(
     errorMaxLines: 3,
     prefixIconColor: Resources.colors.neutralShades.darkGrey,
     suffixIconColor: Resources.colors.neutralShades.darkGrey,
@@ -53,7 +53,7 @@ class AppTextFieldTheme {
   );
 
   /* -- dark theme -- */
-  static final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
+  static InputDecorationTheme get darkInputDecorationTheme => InputDecorationTheme(
     errorMaxLines: 2,
     prefixIconColor: Resources.colors.neutralShades.darkGrey,
     suffixIconColor: Resources.colors.neutralShades.darkGrey,

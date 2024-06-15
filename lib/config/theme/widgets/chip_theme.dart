@@ -5,7 +5,7 @@ class AppChipTheme {
   AppChipTheme._();
 
   /* -- light theme -- */
-  static final ChipThemeData lightChipTheme = ChipThemeData(
+  static ChipThemeData get lightChipTheme => ChipThemeData(
     disabledColor: Resources.colors.neutralShades.grey.withOpacity(0.4),
     labelStyle: TextStyle(color: Resources.colors.neutralShades.black),
     selectedColor: Resources.colors.app.primary,
@@ -14,7 +14,7 @@ class AppChipTheme {
   );
 
   /* -- dark theme -- */
-  static final ChipThemeData darkChipTheme = ChipThemeData(
+  static ChipThemeData get darkChipTheme => ChipThemeData(
     disabledColor: Resources.colors.neutralShades.darkerGrey,
     labelStyle: TextStyle(color: Resources.colors.neutralShades.white),
     selectedColor: Resources.colors.app.primary,

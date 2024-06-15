@@ -5,7 +5,7 @@ class AppBottomSheetTheme {
   AppBottomSheetTheme._();
 
   /* -- light theme -- */
-  static final BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
+  static BottomSheetThemeData get lightBottomSheetTheme => BottomSheetThemeData(
     showDragHandle: true,
     backgroundColor: Resources.colors.neutralShades.white,
     modalBackgroundColor: Resources.colors.neutralShades.white,
@@ -14,7 +14,7 @@ class AppBottomSheetTheme {
   );
 
   /* -- dark theme -- */
-  static final BottomSheetThemeData darkBottomSheetTheme = BottomSheetThemeData(
+  static BottomSheetThemeData get darkBottomSheetTheme => BottomSheetThemeData(
     showDragHandle: true,
     backgroundColor: Resources.colors.neutralShades.black,
     modalBackgroundColor: Resources.colors.neutralShades.black,

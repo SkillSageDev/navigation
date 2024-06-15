@@ -7,7 +7,7 @@ class AppElevatedButtonTheme {
 
 
   /* -- Light Theme -- */
-  static final lightElevatedButtonTheme  = ElevatedButtonThemeData(
+  static ElevatedButtonThemeData get lightElevatedButtonTheme  => ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Resources.colors.background.light,
@@ -22,7 +22,7 @@ class AppElevatedButtonTheme {
   );
 
   /* -- Dark Theme -- */
-  static final darkElevatedButtonTheme = ElevatedButtonThemeData(
+  static ElevatedButtonThemeData get darkElevatedButtonTheme => ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Resources.colors.background.light,

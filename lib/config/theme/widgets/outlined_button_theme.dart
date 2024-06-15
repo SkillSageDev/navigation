@@ -8,7 +8,7 @@ class AppOutlinedButtonTheme {
 
 
   /* -- Light Theme -- */
-  static final lightOutlinedButtonTheme  = OutlinedButtonThemeData(
+  static OutlinedButtonThemeData get lightOutlinedButtonTheme => OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
 
@@ -30,7 +30,7 @@ class AppOutlinedButtonTheme {
   );
 
   /* -- Dark Theme -- */
-  static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
+  static OutlinedButtonThemeData get darkOutlinedButtonTheme => OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
 
       // foreground color

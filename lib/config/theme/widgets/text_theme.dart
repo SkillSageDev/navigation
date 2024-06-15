@@ -5,7 +5,7 @@ class AppTextTheme {
   AppTextTheme._(); // To avoid creating instances
 
   /* -- light theme -- */
-  static final TextTheme lightTextTheme = TextTheme(
+  static TextTheme get lightTextTheme => TextTheme(
     // headline
     headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold, color: Resources.colors.text.textPrimary),
     headlineMedium: const TextStyle().copyWith(fontSize: 24.0, fontWeight: FontWeight.w600, color: Resources.colors.text.textPrimary),
@@ -27,7 +27,7 @@ class AppTextTheme {
   );
 
   /* -- textPrimary Theme -- */
-  static final TextTheme darkTextTheme = TextTheme(
+  static TextTheme get darkTextTheme => TextTheme(
     // headline
     headlineLarge: const TextStyle().copyWith(fontSize: 32.0, fontWeight: FontWeight.bold, color: Resources.colors.text.textWhite),
     headlineMedium: const TextStyle().copyWith(fontSize: 24.0, fontWeight: FontWeight.w600, color: Resources.colors.text.textWhite),

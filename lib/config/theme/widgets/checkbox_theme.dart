@@ -5,7 +5,7 @@ class AppCheckboxTheme {
   AppCheckboxTheme._(); // To avoid creating instances
 
   /* -- light theme -- */
-  static final CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
+  static CheckboxThemeData get lightCheckboxTheme => CheckboxThemeData(
     // shape
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Resources.sizes.volume.xs)),
 
@@ -29,7 +29,7 @@ class AppCheckboxTheme {
   );
 
   /* -- dark theme -- */
-  static final CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
+  static CheckboxThemeData get darkCheckboxTheme => CheckboxThemeData(
     // shape
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Resources.sizes.volume.xs)),
 
