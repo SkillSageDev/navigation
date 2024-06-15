@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/core/resources/Resources.dart';
 import 'package:navigation/features/auth/presentation/pages/login_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
           title: const Text("Home Page"),
           backgroundColor: Colors.blue,
         ),
-        body: Column(
+        body: const Column(
           children: [
             Login(),
           ],
