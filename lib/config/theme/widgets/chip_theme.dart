@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/core/resources/Resources.dart';
+import 'package:navigation/core/resources/resources.dart';
 
 class AppChipTheme {
   AppChipTheme._();

@@ -7,7 +7,7 @@ import 'package:navigation/config/theme/widgets/elevated_button_theme.dart';
 import 'package:navigation/config/theme/widgets/outlined_button_theme.dart';
 import 'package:navigation/config/theme/widgets/text_field_theme.dart';
 import 'package:navigation/config/theme/widgets/text_theme.dart';
-import 'package:navigation/core/resources/Resources.dart';
+import 'package:navigation/core/resources/resources.dart';
 
 class AppTheme{
   const AppTheme();
