@@ -3,6 +3,7 @@ import 'package:navigation/config/theme/app_sizes.dart';
 import 'package:navigation/config/theme/app_theme.dart';
 import 'package:navigation/core/constants/app_fonts.dart';
 import 'package:navigation/core/constants/app_images.dart';
+import 'package:navigation/core/constants/app_texts.dart';
 import 'package:navigation/core/utils/utils.dart';
 
 class Resources{
@@ -12,4 +13,5 @@ class Resources{
   static const AppImages image = AppImages();
   static const AppFonts font = AppFonts();
   static const Utils utils = Utils();
+  static const AppTexts texts = AppTexts();
 }
