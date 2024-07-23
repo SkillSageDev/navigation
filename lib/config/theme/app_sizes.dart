@@ -131,6 +131,7 @@ class _LoadingSizes {
   const _LoadingSizes();
 
   double get loadingIndicatorSize => 36.0;
+  double get loadingIndicatorSpace => 75.0;
 }
 
 // GridView sizes
