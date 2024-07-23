@@ -11,9 +11,9 @@ class HomePage extends StatelessWidget {
           title: const Text("Home Page"),
           backgroundColor: Colors.blue,
         ),
-        body: const Column(
+        body: Column(
           children: [
-            Login(),
+            LoginPage(),
           ],
         ),
       );
