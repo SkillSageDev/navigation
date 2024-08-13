@@ -1,50 +1,48 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable
+// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:go_router/go_router.dart';
-import 'package:navigation/features/auth/presentation/pages/onboarding_page.dart';
+import 'package:gap/gap.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:navigation/core/resources/resources.dart';
+
+import '../widgets/app_divider.dart';
+import '../widgets/app_footer.dart';
+import '../widgets/app_form.dart';
+import '../widgets/header.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
+  final TextEditingController _textEditingController = TextEditingController();
+  bool? isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 56.0, left: 24.0, bottom: 24.0, right: 24.0),
-              child: Column(
-                children: [
-                  // header
-                  Column(
-                    children: [
-                      Text(
-                        "Login",
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {
-                          context.go("/");
-                        },
-                        style: ElevatedButton.styleFrom(
-                            shape: const CircleBorder()),
-                        child: const Icon(Icons.arrow_back_ios_rounded),
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Padding(
+            padding: Resources.sizes.appBar.padding,
+            child: Column(
+              children: [
+                // header
+                Header(),
 
-                  // form
-                  Column(),
+                // space
+                Gap(Resources.sizes.spaceBetweenSections.spaceBtwSections),
 
-                  // divider
+                // form
+                AppForm(textEditingController: _textEditingController, isChecked: isChecked),
 
-                  // footer
-                ],
-              )),
-        ),
+                // divider
+                AppDivider(),
+
+                // space
+                Gap(Resources.sizes.spaceBetweenSections.spaceBtwSections),
+
+                // footer
+                AppFooter(),
+              ],
+            )),
       ),
     );
   }
