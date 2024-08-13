@@ -1,4 +1,6 @@
 // lib/core/theme/app_sizes.dart
+import 'package:flutter/material.dart';
+
 class AppSizes {
   const AppSizes();
 
@@ -63,6 +65,8 @@ class _AppBarSizes {
   const _AppBarSizes();
 
   double get appBarHeight => 56.0;
+  EdgeInsets get padding =>
+      const EdgeInsets.only(top: 56.0, left: 24.0, bottom: 24.0, right: 24.0);
 }
 
 // Image sizes
